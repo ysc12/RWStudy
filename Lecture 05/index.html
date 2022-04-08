@@ -5,48 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>하노이의 탑</title>
+  <script src="Hanoi.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
     #total {
-      height: 500px;
       width: 1200px;
+      display: flex;
     }
 
     #box1 {
       width: 300px;
       height: 500px;
       border: 1px solid red;
-      
     }
 
     
 
-    #total {
-      display: flex;
-      
-    }
     #total>div {
       margin: 40px;
-    }
-    
-
-    ul {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      
-    }
-
-    li {
-      width: 15px;
-      height: 15px;
-      list-style: none;
-      margin: 3px;
-      border: 1px solid black;
-    }
-
-    #r li {
-      background-color: red;
     }
 
     #box2 {
@@ -62,99 +39,46 @@
       border: 1px solid blue;
     }
 
-    #y li {
-      background-color: yellow;
-
+    /* 
+    초기화 버튼 토글
+    clicked 클래스가 있을 때는 나타났다가 block
+    클래스가 없으면 사라짐 none
+    */
+    #box1>div {
+      display: none;
     }
 
-    #g li {
-      background-color: green;
-    }
-
-    #b li {
-      background-color: blue;
-    }
-
-    #p li {
-      background-color: plum;
-    }
-
-    #bl li {
-      background-color: #333;
+    #box1.clicked>div {
+      display: block;
     }
   </style>
 </head>
 
 <body>
   <p>하노이의 탑</p>
-  <button>초기화</button>
+  <input id="btn" type="button" value="초기화" />
 
   <div id="total">
     <div id="box1">
-      <ul id="r">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-
-      </ul>
-
-      <ul id="y">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-
-
-      </ul>
-
-      <ul id="g">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-
-      <ul id="b">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-
-      </ul>
-
-      <ul id="p">
-        <li></li>
-        <li></li>
-        <li></li>
-
-
-      </ul>
-
-      <ul id="bl">
-        <li></li>
-
-
-
-      </ul>
-
-
+      <div>
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+        <br />
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟨🟨🟨🟨🟨🟨🟨🟨🟨
+        <br />
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟩🟩🟩🟩🟩🟩🟩
+        <br />
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟦🟦🟦🟦🟦
+        <br />
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟪🟪🟪
+        <br />
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp⬛
+      </div>
     </div>
 
     <div id="box2">
@@ -164,5 +88,8 @@
     <div id="box3"></div>
   </div>
 </body>
+
+
+
 
 </html>
