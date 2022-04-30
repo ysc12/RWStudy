@@ -1,109 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <title>하노이의 탑</title>
-  <script src="Hanoi.js"></script>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-=======
-  <title>Document</title>
-  <script src="Hanoi.js"></script>
-  <link rel="stylesheet" href="style.css">
->>>>>>> bbdbb5f73b14431f0dfba58a1e47a7fbf45332b7
-  <style>
-    #total {
-      width: 1200px;
-      display: flex;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하노이탑</title>
 
-    #box1 {
-      width: 300px;
-      height: 500px;
-      border: 1px solid red;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    
-
-    #total>div {
-      margin: 40px;
-    }
-
-    #box2 {
-      width: 300px;
-      height: 500px;
-      border: 1px solid green;
-      text-align: center;
-    }
-
-    #box3 {
-      width: 300px;
-      height: 500px;
-      border: 1px solid blue;
-    }
-
-    /* 
-    초기화 버튼 토글
-    clicked 클래스가 있을 때는 나타났다가 block
-    클래스가 없으면 사라짐 none
-    */
-    #box1>div {
-      display: none;
-    }
-
-    #box1.clicked>div {
-      display: block;
-    }
-  </style>
 </head>
-
 <body>
-  <p>하노이의 탑</p>
-<<<<<<< HEAD
-  <input id="btn" type="button" value="초기화" />
-=======
-  <input id="btn" type="button" value="초기화" onclick="Init();">
->>>>>>> bbdbb5f73b14431f0dfba58a1e47a7fbf45332b7
+    <article class="hanoi">
+        <header>
+            <h1>하노이탑</h1>
+            <p>
+                이동 한 횟수 : <b id="counter">0</b>
+            </p>
+            <button onclick="clearTower()">초기화</button>
+        </header>
+        <div>
+            <section id="zone-0" onclick="handleZoneClick(0)">
+            </section>
+            <section id="zone-1" onclick="handleZoneClick(1)">
+            </section>
+            <section id="zone-2" onclick="handleZoneClick(2)">
+            </section>
+        </div>
+    </article>
 
-  <div id="total">
-    <div id="box1">
-      <div>
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-        <br />
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟨🟨🟨🟨🟨🟨🟨🟨🟨
-        <br />
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟩🟩🟩🟩🟩🟩🟩
-        <br />
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟦🟦🟦🟦🟦
-        <br />
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp🟪🟪🟪
-        <br />
-        <br />
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp⬛
-      </div>
-    </div>
-
-    <div id="box2">
-      <p>second</p>
-    </div>
-
-    <div id="box3"></div>
-  </div>
+    <script src="Hanoi.js"></script>
 </body>
-
-<<<<<<< HEAD
-
-
-
 </html>
-=======
-</html>
->>>>>>> bbdbb5f73b14431f0dfba58a1e47a7fbf45332b7
